@@ -65,3 +65,46 @@ li {
 .selected {
     font-weight: bold;
 }
+
+.question-page-author-info {
+    height: 75px;
+}
+
+.question-page-author-info  p {
+    height: 75px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.btn {
+    text-transform: uppercase;
+    margin: 5px auto;
+    padding: 5px;
+    border: 1px solid rgba(0,0,0,.29);
+    cursor: pointer;
+    background: #fff;
+    font-size: 16px;
+    width: 75%;
+    position: relative;
+}
+
+.btn:hover {
+    border-color: rgba(0,0,0,.5);
+    text-decoration: none;
+}
+
+.btn:focus {
+    outline: 0;
+    font-weight: 700;
+    border-width: 2px;
+}
+
+.votes {
+    display: inline-block;
+    width: 20%;
+    font-size: 0.75em;
+    vertical-align: middle;
+    padding: 10px;
+    text-align: center;
+}
+

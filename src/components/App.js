@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import Dashboard from './Dashboard';
 import {handleInitialData} from "../actions/shared";
+import QuestionPage from './QuestionPage';
 
 class App extends Component {
   componentDidMount() {
@@ -15,7 +16,7 @@ class App extends Component {
               this.props.loading
               ? (<h3 className='center'>Loading . . .</h3>)
                   : (
-                      <Dashboard/>
+                      <QuestionPage/>
                   )
           }
       </div>
