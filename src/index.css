@@ -135,3 +135,42 @@ li {
     height: 1em;
     margin: 10px 0;
 }
+
+.leaderboard-list {
+    width: 100%;
+    max-width: 500px;
+    margin: 10px auto;
+    border: 1px solid #dad7d7;
+    border-radius: 3px;
+}
+
+.leaderboard-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.leaderboard-user-stats {
+    width: 100%;
+}
+
+.leaderboard-user-stats span {
+    margin: 5px 0;
+}
+
+.start {
+    text-align: start;
+    width: 120px;
+    display: inline-block;
+}
+
+.leadboard-stats {
+    display: inline-block;
+    width: 20%;
+    font-size: 0.75em;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.leaderboard li {
+    padding: 0px;
+}
