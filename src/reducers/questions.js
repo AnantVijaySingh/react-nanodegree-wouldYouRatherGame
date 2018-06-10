@@ -1,4 +1,6 @@
-import {RECEIVE_QUESTIONS, SAVE_ANSWER} from "../actions/questions";
+import {RECEIVE_QUESTIONS, SAVE_ANSWER, NEW_QUESTION} from "../actions/questions";
+
+// Todo: See if the user store state needs to be updates as well or if it makes sense to pull it fresh from the DB
 
 export default function questions(state={}, action) {
     switch (action.type) {
@@ -25,6 +27,13 @@ export default function questions(state={}, action) {
                     }
                 }
             };
+        case NEW_QUESTION:
+            const {id} = action.question;
+            return {
+                ...state,
+                [id]: action.question
+            };
+
         default:
             return state
     }
