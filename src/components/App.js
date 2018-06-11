@@ -5,6 +5,7 @@ import {handleInitialData} from "../actions/shared";
 import QuestionPage from './QuestionPage';
 import NewQuestion from './NewQuestion';
 import Leaderboard from './Leaderboard';
+import Logout from './Logout';
 
 class App extends Component {
   componentDidMount() {
@@ -18,7 +19,7 @@ class App extends Component {
               this.props.loading
               ? (<h3 className='center'>Loading . . .</h3>)
                   : (
-                      <Leaderboard/>
+                      <Logout/>
                   )
           }
       </div>
