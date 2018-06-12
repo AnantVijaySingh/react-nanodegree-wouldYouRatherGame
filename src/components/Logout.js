@@ -9,7 +9,7 @@ class Logout extends Component {
     };
 
     render() {
-        const {authedUser, userInfo} = this.props;
+        const {userInfo} = this.props;
 
         return (
             <div>

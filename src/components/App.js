@@ -6,6 +6,7 @@ import QuestionPage from './QuestionPage';
 import NewQuestion from './NewQuestion';
 import Leaderboard from './Leaderboard';
 import Logout from './Logout';
+import Login from './Login';
 
 class App extends Component {
   componentDidMount() {
@@ -19,7 +20,7 @@ class App extends Component {
               this.props.loading
               ? (<h3 className='center'>Loading . . .</h3>)
                   : (
-                      <Logout/>
+                      <Login/>
                   )
           }
       </div>
