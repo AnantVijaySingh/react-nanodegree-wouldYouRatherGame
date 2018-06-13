@@ -192,3 +192,37 @@ li {
     background: #fff;
     padding: 0;
 }
+
+.nav ul {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+.active {
+    font-weight: bold;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.btn-dashboard {
+    text-transform: uppercase;
+    padding: 5px;
+    border: 2px solid rgba(0,0,0,0);
+    border-bottom: 2px solid darkgray;
+    border-radius: 2px;
+    cursor: pointer;
+    background: #fff;
+    font-size: 16px;
+    width: 150px;
+    position: relative;
+    margin: 10px;
+}
+
+.btn-dashboard:focus {
+    border-bottom: 2px solid black;
+}
