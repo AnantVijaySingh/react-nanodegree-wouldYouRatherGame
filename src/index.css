@@ -197,10 +197,7 @@ li {
     display: flex;
     flex-direction: row;
     text-decoration: none;
-}
-
-.active {
-    font-weight: bold;
+    align-items: center;
 }
 
 .container {
@@ -225,4 +222,18 @@ li {
 
 .btn-dashboard:focus {
     border-bottom: 2px solid black;
+}
+
+.nav ul .user-avatar {
+    margin-left: auto;
+    border-bottom: none;
+}
+
+.nav li {
+    width: 120px;
+    text-align: center;
+}
+
+.nav li:active {
+    font-weight: bold;
 }

@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {setAuthedUser} from "../actions/authedUser";
+import {Link} from 'react-router-dom';
 
 class Login extends Component {
 
     handleClick = (e,id) => {
         e.preventDefault();
         this.props.dispatch(setAuthedUser(id));
+
     };
 
     render() {
@@ -15,7 +17,7 @@ class Login extends Component {
         return (
             <div>
                 <h3>LOGIN</h3>
-                <div>
+                <Link to='/'>
                     {
                         Object.keys(users).map((id) => (
                             <button key={id} className='avatar-btn' onClick={(e) => this.handleClick(e,id)}>
@@ -29,7 +31,7 @@ class Login extends Component {
                             )
                         )
                     }
-                </div>
+                </Link>
             </div>
         )
     }

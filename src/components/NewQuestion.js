@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {handleNewQuestion} from "../actions/questions";
+import {Redirect} from 'react-router-dom';
 
 class NewQuestion extends Component {
     state = {
         optionOneText: '',
-        optionTwoText: ''
+        optionTwoText: '',
+        toHome: false,
     };
 
     handleChange = (e,option) => {
@@ -23,10 +25,21 @@ class NewQuestion extends Component {
         const {optionOneText, optionTwoText} = this.state;
         const {dispatch, author} = this.props;
 
-        dispatch(handleNewQuestion({optionOneText, optionTwoText, author}))
+        dispatch(handleNewQuestion({optionOneText, optionTwoText, author}));
+
+        this.setState(() => ({
+            optionOneText: '',
+            optionTwoText: '',
+            toHome: true,
+        }))
     };
 
     render () {
+
+        if( this.state.toHome === true) {
+            return <Redirect to='/'/>
+        }
+
         return (
             <div>
                 <h3>Would You Rather...?</h3>
