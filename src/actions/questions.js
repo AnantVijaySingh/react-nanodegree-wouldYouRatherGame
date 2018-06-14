@@ -1,5 +1,5 @@
 import {_saveQuestion, _saveQuestionAnswer} from "../utils/_Data";
-import {addAskedQuestion} from "./users";
+import {addAnswer, addAskedQuestion} from "./users";
 
 export const RECEIVE_QUESTIONS = 'RECEIVE_QUESTIONS';
 export const SAVE_ANSWER = 'SAVE_ANSWER';
@@ -32,9 +32,11 @@ export function handleSaveAnswer(info) {
     return ((dispatch) => {
 
         return _saveQuestionAnswer(info)
-            .then(
-                dispatch(saveAnswer(info))
-            )
+            .then(() => {
+                    dispatch(saveAnswer(info));
+                    console.log(info);
+                    dispatch(addAnswer(info));
+            })
             .catch((e) => {
                 console.warn('Error in processing vote ',e)
             })
