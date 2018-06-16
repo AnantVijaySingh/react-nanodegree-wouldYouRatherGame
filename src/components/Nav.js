@@ -1,3 +1,5 @@
+// Component allows users to navigate the application
+
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
 import {NavLink} from 'react-router-dom';
@@ -19,7 +21,7 @@ class Nav extends Component {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/new' exact>
+                        <NavLink to='/add' exact>
                             New Question
                         </NavLink>
                     </li>

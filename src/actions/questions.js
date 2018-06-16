@@ -34,7 +34,6 @@ export function handleSaveAnswer(info) {
         return _saveQuestionAnswer(info)
             .then(() => {
                     dispatch(saveAnswer(info));
-                    console.log(info);
                     dispatch(addAnswer(info));
             })
             .catch((e) => {

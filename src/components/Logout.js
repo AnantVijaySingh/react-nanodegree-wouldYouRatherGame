@@ -1,3 +1,6 @@
+// Component allows user to logout
+// Shows the user their basic stats
+
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {logoutUser} from "../actions/authedUser";

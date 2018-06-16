@@ -15,7 +15,6 @@ a {
     color: #252525;
 }
 
-
 .center {
     text-align: center;
 }
@@ -91,12 +90,6 @@ li {
 .btn:hover {
     border-color: rgba(0,0,0,.5);
     text-decoration: none;
-}
-
-.btn:focus {
-    outline: 0;
-    font-weight: 700;
-    border-width: 2px;
 }
 
 .submit-btn {

@@ -1,3 +1,6 @@
+// Component to display the leaderboard
+// The leaderboard is a list of users ranked based on the total number of questions answered and created
+
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 

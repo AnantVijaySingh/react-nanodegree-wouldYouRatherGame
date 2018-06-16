@@ -1,3 +1,6 @@
+// Home page component of the application
+// Handles displaying of answered and unanswered questions
+
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import DashboardQuestion from './DashboardQuestion';
@@ -51,7 +54,7 @@ class Dashboard extends Component {
 function mapStateToProps(state) {
     return {
         questionIds: Object.keys(state.questions)
-            .sort((a,b) => state.questions[a].timeStamp - state.questions[b].timeStamp),
+            .sort((a,b) => state.questions[b].timestamp - state.questions[a].timestamp),
         userData: state.users[state.authedUser],
     }
 }

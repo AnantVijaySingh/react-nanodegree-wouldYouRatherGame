@@ -1,3 +1,7 @@
+// Component displays the form to create a new question
+// The submit button is activated only when both options have text
+// After submitting the user is redirected to the home page
+
 import React, { Component, Fragment } from 'react';
 import {connect} from 'react-redux';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
@@ -30,7 +34,7 @@ class App extends Component {
                                 : (
                                     <div>
                                         <Route path='/' exact component={Dashboard} />
-                                        <Route path='/new' exact component={NewQuestion}/>
+                                        <Route path='/add' exact component={NewQuestion}/>
                                         <Route path='/leaderboard' exact component={Leaderboard}/>
                                         <Route path='/logout' exact component={Logout}/>
                                         <Route path='/question/:id' component={QuestionPage}/>
