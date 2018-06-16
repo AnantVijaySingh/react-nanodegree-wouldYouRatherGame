@@ -2,7 +2,8 @@ Would You Rather is simple game built as part of the Udacity React Nanodegree pr
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-_Data.js and user images were sourced from the Udacity repository https://github.com/udacity/reactnd-project-would-you-rather-starter.
+_Data.js was sourced from the Udacity repository https://github.com/udacity/reactnd-project-would-you-rather-starter 
+User images and basic CSS design guidlines were soruced from https://github.com/udacity/reactnd-chirper-app
 
 Basic Setup
 
