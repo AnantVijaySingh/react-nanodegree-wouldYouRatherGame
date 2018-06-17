@@ -12,9 +12,9 @@ class Dashboard extends Component {
 
     handleClick = (e,col) => {
         e.preventDefault();
-        this.setState(() => ({
+        this.setState({
             column: col
-        }))
+        })
     };
 
     render() {

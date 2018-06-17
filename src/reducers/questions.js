@@ -16,11 +16,11 @@ export default function questions(state={}, action) {
                 [qid]: {
                     ...state[qid],
                     optionOne: {
-                        ...state[qid][answer],
+                        ...state[qid]['optionOne'],
                         votes: answer === 'optionOne' && !state[qid]['optionOne'].votes.includes(authedUser) && !state[qid]['optionTwo'].votes.includes(authedUser) ? state[qid]['optionOne'].votes.concat([authedUser]) : state[qid]['optionOne'].votes
                     },
                     optionTwo: {
-                        ...state[qid][answer],
+                        ...state[qid]['optionTwo'],
                         votes: answer === 'optionTwo' && !state[qid]['optionTwo'].votes.includes(authedUser) && !state[qid]['optionOne'].votes.includes(authedUser) ? state[qid]['optionTwo'].votes.concat([authedUser]) : state[qid]['optionTwo'].votes
                     }
                 }

@@ -12,7 +12,8 @@ class Logout extends Component {
     };
 
     render() {
-        const {userInfo} = this.props;
+        const { userInfo: { avatarURL, name, answers, questions } } = this.props;
+
 
         return (
             <div>
@@ -20,20 +21,20 @@ class Logout extends Component {
                 <div className='logout-container'>
                     <div>
                         <img
-                            src={userInfo.avatarURL}
+                            src={avatarURL}
                             className='avatar'
-                            alt={userInfo.name}
+                            alt={name}
                         />
                     </div>
-                    <div>{userInfo.name}</div>
+                    <div>{name}</div>
                     <div>
                         <div className='leadboard-stats'>
                             <p style={{fontWeight:'bolder'}}>Answered</p>
-                            <p>{Object.keys(userInfo.answers).length}</p>
+                            <p>{Object.keys(answers).length}</p>
                         </div>
                         <div className='leadboard-stats'>
                             <p style={{fontWeight:'bolder'}}>Asked</p>
-                            <p>{userInfo.questions.length}</p>
+                            <p>{questions.length}</p>
                         </div>
                     </div>
                     <button className='submit-btn' onClick={this.handleLogout}>Logout</button>

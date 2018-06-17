@@ -22,9 +22,10 @@ class QuestionPage extends Component {
 
     render() {
         const {optionOne, optionTwo} = this.props.question;
+        console.log(optionOne,optionTwo);
         const authedUser = this.props.authedUser;
         const {name, avatarURL} = this.props.authorUser;
-        const {checkQuesExist, numberOfUsers} =  this.props;
+        const {checkQuesExist} =  this.props;
 
         return (
             <div className='dashboard-question'>
@@ -44,7 +45,7 @@ class QuestionPage extends Component {
                                                 </div>
                                                 <div className='votes'>
                                                     <p style={{fontWeight:'bolder'}}>%</p>
-                                                    <p>{Math.round((optionOne['votes'].length/numberOfUsers) *  100)}%</p>
+                                                    <p>{Math.round((optionOne['votes'].length/(optionOne['votes'].length + optionTwo['votes'].length)) *  100)}%</p>
                                                 </div>
                                             </div>) :
                                             (<div className='votes'>
@@ -70,7 +71,7 @@ class QuestionPage extends Component {
                                                 </div>
                                                 <div className='votes'>
                                                     <p style={{fontWeight:'bolder'}}>%</p>
-                                                    <p>{Math.round((optionTwo['votes'].length/numberOfUsers) *  100)}%</p>
+                                                    <p>{Math.round((optionTwo['votes'].length/(optionOne['votes'].length + optionTwo['votes'].length)) *  100)}%</p>
                                                 </div>
                                             </div>) :
                                             (<div className='votes'>
@@ -112,7 +113,6 @@ function mapStateToProps({authedUser, questions, users}, props) {
 
     return {
         authedUser,
-        numberOfUsers: Object.keys(users).length,
         question: checkQuesExist ? questions[id] : {},
         authorUser: checkQuesExist ? users[questions[id].author] : {},
         checkQuesExist

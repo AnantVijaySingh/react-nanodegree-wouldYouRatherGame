@@ -27,11 +27,11 @@ class NewQuestion extends Component {
 
         dispatch(handleNewQuestion({optionOneText, optionTwoText, author}));
 
-        this.setState(() => ({
+        this.setState({
             optionOneText: '',
             optionTwoText: '',
             toHome: true,
-        }))
+        })
     };
 
     render () {
